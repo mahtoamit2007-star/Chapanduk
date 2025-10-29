@@ -2,7 +2,8 @@
 
 This project introduces amit, a simple, foundational smart contract designed to help beginners understand how to store basic data on the Ethereum Virtual Machine (EVM). It serves as the starting block for building any decentralized system by creating a transparent, immutable registry of users.
 
-![Uploading {ED81151A-9381-40BB-92D9-5686E4950C25}.png…]()
+<img width="1366" height="768" alt="{A1B7079E-818F-45C0-A6E6-4DE6D2A63B5C}" src="https://github.com/user-attachments/assets/4bc38d0b-c873-4c85-a82f-166c96c99908" />
+
 
 💡 Project Description
 The goal of the amit contract is to create a secure, tamper-proof list of user addresses (wallets) that have interacted with the system. In a decentralized application (DApp), a registry like this is often the first layer, used for tasks such as tracking members, granting early access, or managing permissions.
