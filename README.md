@@ -52,48 +52,6 @@ The **`amit`** smart contract maintains a **permanent list** of user addresses o
 
 ---
 
-## 💻 **Smart Contract Code**
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-/**
- * @title amit
- * @dev A foundational, beginner-friendly contract for creating an immutable, on-chain registry of user addresses.
- * It serves as a simple example of state modification and array management on the EVM.
- */
-contract amit {
-
-    // Public array to store the wallet addresses of all registered users.
-    address[] public registeredUsers;
-
-    // Mapping to track if an address has already registered (true) or not (false).
-    mapping(address => bool) private isRegistered;
-
-    // Event emitted when a user successfully registers.
-    event UserRegistered(address indexed userAddress, uint256 totalUsers);
-
-    /**
-     * @notice Allows the sender to permanently register their wallet address in the registry.
-     */
-    function registerUser() public {
-        require(!isRegistered[msg.sender], "User already registered in the system.");
-
-        registeredUsers.push(msg.sender);
-        isRegistered[msg.sender] = true;
-
-        emit UserRegistered(msg.sender, registeredUsers.length);
-    }
-
-    /**
-     * @notice Returns the total number of users currently registered in the system.
-     */
-    function getTotalUsers() public view returns (uint256) {
-        return registeredUsers.length;
-    }
-}
-```
 ## 🔮 **Future Enhancements**
 
 - 🧭 **Build a React Frontend:** Create a DApp interface using Ethers.js or Web3.js to interact with the contract.  
